@@ -63,7 +63,6 @@
 CXX        = g++
 CXXFLAGS   = -c -Wall
 LDFLAGS    = 
-# SOURCES  = math.cpp functions.cpp
 OBJS       = math.o functions.o
 DEPS       = functions.h
 EXECUTABLE = math 
