@@ -24,8 +24,8 @@ The syntax for accessing a make variable is `$(VAR)`. Make has a whole host of b
 * `CXXFLAGS` - compilation flags for c++ source files
 * `CPPFLAGS` - flags for the c-preprocessor (typically include file paths and symbols defined on the command line), used by c and c++
 * `LD`       - the linker to use
-* `LDFLAGS`  - linker flags
-* `LDLIBS`   - libraries to link
+* `LDFLAGS`  - linker flags, i.e. `-g`, `-O1`, `-O2`, `-O3` and so on.
+* `LDLIBS`   - libraries to link, i.e. `-lm`, `-lz`, `-pthread` and so on.
 
 ## Pattern rules
 
@@ -59,8 +59,9 @@ And finally, the same `makefile` example to build the executable `./math` progra
 ```Makefile
 # Makefile
 CXX        = g++
-CXXFLAGS   = -c -Wall
+CXXFLAGS   = -g -c -Wall
 LDFLAGS    = 
+LDLIBS     =
 OBJS       = math.o functions.o
 DEPS       = functions.h
 EXECUTABLE = math 
@@ -71,7 +72,7 @@ all: $(EXECUTABLE)
 	@echo All done!
 
 $(EXECUTABLE): $(OBJS)
-	$(CXX) $(LDFLAGS) $^ -o $@ 
+	$(CXX) $(LDFLAGS) $^ -o $@ $(LDLIBS)
 
 %.o: %.cpp $(DEPS)
 	$(CXX) $(CXXFLAGS) $<

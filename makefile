@@ -24,8 +24,8 @@
 # CPPFLAGS = flags for the c-preprocessor (typically include file paths 
 # and symbols defined on the command line), used by c and c++
 # LD       = the linker to use
-# LDFLAGS  = linker flags
-# LDLIBS   = libraries to link
+# LDFLAGS  = linker flags, i.e. -g, -O1, -O2, -O3 and so on. 
+# LDLIBS   = libraries to link, i.e. -lm, -lz, -pthread and so on.
 # --------------------------------------------------------------------------- 
 #								   PATTERN RULES
 # --------------------------------------------------------------------------- 
@@ -61,8 +61,9 @@
 # ---------------------------------------------------------------------------
 
 CXX        = g++
-CXXFLAGS   = -c -Wall
-LDFLAGS    = 
+CXXFLAGS   = -g -c -Wall
+LDFLAGS    = -g
+LDLIBS     =
 OBJS       = math.o functions.o
 DEPS       = functions.h
 EXECUTABLE = math 
@@ -72,7 +73,7 @@ all: $(EXECUTABLE)
 	@echo All done!
 
 $(EXECUTABLE): $(OBJS)
-	$(CXX) $(LDFLAGS) $^ -o $@ 
+	$(CXX) $(LDFLAGS) $^ -o $@ $(LDLIBS)
 
 %.o: %.cpp $(DEPS)
 	$(CXX) $(CXXFLAGS) $<

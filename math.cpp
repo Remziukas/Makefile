@@ -1,4 +1,5 @@
 #include <iostream>
+#include <cmath>
 #include "functions.h"
 /**
  * Very basic implementation of main math operations
@@ -10,6 +11,7 @@
  */
 int main(int argc, char const *argv[])
 {
+	std::cout << "Let's make some math! :)" << std::endl;
 	double x = 10.0, y = 5.0;
 	if (argc > 1) // Use values passed by command line arg.
 	{
@@ -35,6 +37,15 @@ int main(int argc, char const *argv[])
 		   default:
 		       std::cout << sum(x,y) << std::endl;
 		}
+	} else {
+		std::cout << x << "+" << y << " = ";
+		std::cout << sum(x,y) << std::endl;
+		std::cout << x << "-" << y << " = ";
+		std::cout << sub(x,y) << std::endl;
+		std::cout << x << "*" << y << " = ";
+		std::cout << mul(x,y) << std::endl;
+		std::cout << x << "/" << y << " = ";
+		std::cout << divi(x,y) << std::endl;
 	}
 	return 0;
 } 
