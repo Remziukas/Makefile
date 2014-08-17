@@ -17,8 +17,8 @@
 # a project can be compile by a very simple makefile, indeed.
 #
 # Traditional variables (Make Macros) Used By Implicit (Built-in) Rules:
-# CC       = the c compiler to use
-# CXX      = the c++ compiler to use
+# CC       = the c compiler to use: gcc, clang, icc
+# CXX      = the c++ compiler to use: g++, clang++, icpc
 # CFLAGS   = compilation flags for c source files
 # CXXFLAGS = compilation flags for c++ source files
 # CPPFLAGS = flags for the c-preprocessor (typically include file paths 
