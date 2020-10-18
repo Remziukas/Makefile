@@ -86,7 +86,7 @@ clean:
 ## References 
 
 1. [GCC and Make](https://www3.ntu.edu.sg/home/ehchua/programming/cpp/gcc_make.html "https://www3.ntu.edu.sg/home/ehchua/programming/cpp/gcc_make.html")
-2. [Makefiles by example](http://mrbook.org/tutorials/make/ "http://mrbook.org/tutorials/make/")
+2. [Makefiles by example](http://mrbook.org/blog/tutorials/make/ "http://mrbook.org/blog/tutorials/make/")
 3. [How to make SIMPLE C++ Makefile?](http://stackoverflow.com/questions/2481269/how-to-make-simple-c-makefile "http://stackoverflow.com/questions/2481269/how-to-make-simple-c-makefile")
 4. [A Simple Makefile Tutorial](http://www.cs.colby.edu/maxwell/courses/tutorials/maketutor/ "http://www.cs.colby.edu/maxwell/courses/tutorials/maketutor/")
 5. [Managing Projects with GNU Make, By Robert Mecklenburg](http://oreilly.com/catalog/make3/book/ "http://oreilly.com/catalog/make3/book/")
